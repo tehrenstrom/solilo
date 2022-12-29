@@ -1,6 +1,6 @@
 # Create a main sample user.
-User.create!(name:  "Example User",
-             email: "example@solilo.org",
+User.create!(name:  "Travis Ehrenstrom",
+             email: "travisehrenstrom@gmail.com",
              password:              "foobar",
              password_confirmation: "foobar",
              admin: true)
