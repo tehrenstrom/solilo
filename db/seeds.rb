@@ -3,7 +3,9 @@ User.create!(name:  "Travis Ehrenstrom",
              email: "travisehrenstrom@gmail.com",
              password:              "foobar",
              password_confirmation: "foobar",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 # Generate a bunch of additional users.
 99.times do |n|
@@ -13,8 +15,12 @@ User.create!(name:  "Travis Ehrenstrom",
   User.create!(name:  name,
                email: email,
                password:              password,
-               password_confirmation: password)
-end# This file should contain all the record creation needed to seed the database with its default values.
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
+end
+
+# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:

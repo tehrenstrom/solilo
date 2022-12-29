@@ -33,6 +33,14 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.action_mailer.raise_delivery_errors = false
+
+  host = 'http://127.0.0.1:300' # Don't use this literally; use your local host instead.
+  # Use this on the cloud IDE.
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  # Use this if developing on localhost.
+  # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
